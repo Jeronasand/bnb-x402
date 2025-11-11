@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 import {createPublicClient, http} from 'viem';
-import {bsc, mainnet, polygon, arbitrum, base} from 'viem/chains';
+import {bsc, mainnet, polygon, arbitrum, base,bscTestnet} from 'viem/chains';
 import {verifyTransferWithAuthorizationSupport} from '/Users/yuanyong/Downloads/aeon_402/typescript/packages/X402/dist/schemes/exact/evm/utils/contractUtils.js';
 
 // Supported network configurations
@@ -26,6 +26,10 @@ const NETWORKS = {
         chain: base,
         rpcUrl: 'https://mainnet.base.org',
     },
+    bscTestnet: {
+        chain: bscTestnet,
+        rpcUrl: 'https://data-seed-prebsc-1-s1.binance.org:8545/',
+    }
 };
 
 /**

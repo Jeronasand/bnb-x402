@@ -192,6 +192,8 @@ export const getChainId = (network: string) => {
   switch (network) {
     case "bsc":
       return "56";
+    case "bscTestnet":
+      return "97";
     case "base":
       return "8453";
     case "polygon":
@@ -207,6 +209,8 @@ export const getNetworkName = (chainId: string) => {
   switch (chainId) {
     case "56":
       return "bsc";
+    case "97":
+      return "bscTestnet";
     case "8453":
       return "base";
     case "137":
@@ -227,7 +231,7 @@ function EvmPaymentProcessor({
   onError,
   onProcessing,
   paymentAttemptRef,
-  networkId = "bsc",
+  networkId = "bscTestnet",
 }: {
   walletClient: any;
   connectedAddress: string;

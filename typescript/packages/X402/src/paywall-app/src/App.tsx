@@ -37,8 +37,8 @@ function App() {
 
     // Use server-injected payment requirements, fallback to local config if needed
     const requirements = window.x402?.paymentRequirements ?? (imageGenerationPaymentRequirements as EnrichedPaymentRequirements[]);
-    console.log("[DEBUG] Payment requirements loaded:", requirements);
-    console.log("[DEBUG] Number of payment options:", requirements.length);
+    console.log("[DEBUG] JJ Payment requirements loaded:", requirements);
+    console.log("[DEBUG] JJ Number of payment options:", requirements.length);
     requirements.forEach((req, index) => {
       console.log(`[DEBUG] Payment option ${index}:`, {
         tokenSymbol: req.tokenSymbol,

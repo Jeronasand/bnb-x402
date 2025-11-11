@@ -7,7 +7,7 @@ const config = createConfig({
     connectors: [
         metaMask(),
         // coinbaseWallet({ appName: "AeonGPT x402" }),
-        walletConnect({projectId: import.meta.env.VITE_WALLETCONNECT_PROJECT_ID ?? ""}),
+        walletConnect({projectId: "3acbba0c2aea73d610b83891fd8ee47e"}),
         injected({shimDisconnect: true, target: "phantom"})
     ],
     transports: {
