@@ -21,20 +21,34 @@ console.log("Server is running");
 app.use(
   paymentMiddleware(
     {
+      // Multiple payment options for /weather route
+      // "/weather": createRouteConfigFromPrice("$0.001", network, evmAddress),
       "/weather": {
         paymentRequirements: [
           {
             scheme: "exact",
             namespace: "evm",
-            tokenAddress: "0xa07857c8dB4748Ab4d7774c7B167F9EAc93F0D72", // AKET on BSC
+            tokenAddress: "0x55d398326f99059ff775485246999027b3197955", // USDT on BSC
             amountRequired: 0.001,
             amountRequiredFormat: "humanReadable",
-            networkId: "97",
+            networkId: "56",
             payToAddress: evmAddress,
-            description: "Weather data access with AKET",
+            description: "Weather data access with USDT",
             tokenDecimals: 18,
-            tokenSymbol: "AKET",
-          }
+            tokenSymbol: "USDT",
+          },
+          {
+            scheme: "exact",
+            namespace: "evm",
+            tokenAddress: "0x6e3BCf81d331fa7Bd79Ac2642486c70BEAE2600E", // TESTU on BSC
+            amountRequired: 0.01,
+            amountRequiredFormat: "humanReadable",
+            networkId: "56",
+            payToAddress: evmAddress,
+            description: "Weather data access with TESTU",
+            tokenDecimals: 18,
+            tokenSymbol: "TESTU",
+          },
         ],
       },
       "/premium/*": {
