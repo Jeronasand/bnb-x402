@@ -2,7 +2,7 @@ import { z } from "zod";
 
 // Define network types
 export const EVMNetworkSchema = z.enum([
-  "base", "avalanche", "iotex", "bsc", "polygon", "sei"
+  "base", "avalanche", "iotex", "bsc", "polygon", "sei","bscTestnet"
 ]);
 
 
@@ -20,6 +20,8 @@ export const SupportedEVMNetworks: EVMNetwork[] = [
   "bsc",
   "polygon",
   "sei",
+  'bscTestnet'
+
 ];
 
 
@@ -35,6 +37,7 @@ export const EvmNetworkToChainId = new Map<EVMNetwork, number>([
   ["bsc", 56],
   ["polygon", 137],
   ["sei", 1329],
+  ['bscTestnet',97]
 ]);
 
 export const ChainIdToEvmNetwork = Object.fromEntries(
@@ -60,6 +63,8 @@ export const NetworkMetadata = {
   bsc: { name: "BNB Smart Chain", type: "evm" },
   polygon: { name: "Polygon", type: "evm" },
   sei: { name: "Sei", type: "evm" },
+  bscTestnet: { name: "bscTestnet", type: "evm" },
+
 } as const;
 
 // Helper to get network type

@@ -57,7 +57,7 @@ export function getWalletIcon(walletId: WalletType) {
  */
 function createCoinFromRequirement(requirement: EnrichedPaymentRequirements) {
   const tokenSymbol = requirement.tokenSymbol || "Missing token metadata";
-  
+  console.log("[Jeronasand] createCoinFromRequirement called with:", requirement, "Token Symbol:", tokenSymbol);
   return {
     id: requirement.tokenAddress || "",
     name: tokenSymbol,

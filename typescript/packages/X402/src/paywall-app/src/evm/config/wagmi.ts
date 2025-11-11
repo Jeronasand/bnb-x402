@@ -1,9 +1,9 @@
 import {type Config, createConfig, http} from "wagmi";
-import {base, bsc, polygon, sei} from "viem/chains";
+import {base, bsc, bscTestnet, polygon, sei} from "viem/chains";
 import {injected, metaMask, walletConnect} from "wagmi/connectors";
 
 const config = createConfig({
-    chains: [bsc, base, polygon, sei],
+    chains: [bsc, base, polygon, sei,bscTestnet],
     connectors: [
         metaMask(),
         // coinbaseWallet({ appName: "AeonGPT x402" }),
@@ -15,6 +15,8 @@ const config = createConfig({
         [base.id]: http(),
         [polygon.id]: http(),
         [sei.id]: http(),
+        [bscTestnet.id]: http(),
+
     },
 }) as Config;
 

@@ -78,7 +78,7 @@ function App() {
           <main className="min-h-screen flex items-center justify-center">
             <div className="w-full max-w-[800px] mx-auto p-8">
               <h1 className="text-2xl font-semibold mb-2">
-                Aeon X402 Payment Example
+                AKEDO X402 Payment Example
               </h1>
 
               <p className="text-gray-500 dark:text-gray-400 text-base mb-8">

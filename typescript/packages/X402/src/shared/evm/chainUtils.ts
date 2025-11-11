@@ -1,4 +1,4 @@
-import { base, bsc, mainnet, polygon, sei } from "viem/chains";
+import { base, bsc, bscTestnet, mainnet, polygon, sei } from "viem/chains";
 import { type Chain } from "viem/chains";
 
 type ChainConfig = {
@@ -32,6 +32,12 @@ const chains: ChainRegistry = {
     rpcEnvVariable: "BSC_RPC_URL",
     nativeTokenDecimals: 18,
     nativeTokenSymbol: "BNB",
+  },
+  "97": {
+    chain: bscTestnet,
+    rpcEnvVariable: "BSC_TESTNET_RPC_URL",
+    nativeTokenDecimals: 18,
+    nativeTokenSymbol: "tBNB",
   },
   "137": {
     chain: polygon,
